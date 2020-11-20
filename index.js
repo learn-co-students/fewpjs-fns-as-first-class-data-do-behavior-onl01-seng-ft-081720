@@ -7,7 +7,20 @@ function handleClick(e) {
   displayMessage(greet(timeString))
 }
 
-/* End Given Code, don't edit above here...*/
 
-/* Write your implementation of greet() */
-/* Write your implementation of displayMessage() */
+/* End Given Code, don't edit above here...*/
+function greet(time){
+  let nowTime = time.split(':');
+  let nowHour = parseInt(nowTime[0]);
+  if (nowHour<12){
+    return "Good Morning";
+  } else if (nowHour>17){
+    return "Good Evening";
+  }
+  return "Good Afternoon";
+}
+/* Write your implementation of displayMessage() */	
+function displayMessage(msg){
+  document.getElementById("greeting").innerText = msg;
+}
+
